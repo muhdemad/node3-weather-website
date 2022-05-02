@@ -67,7 +67,9 @@ app.get('/weather' ,(req, res) => {
             res.send({
                 address,
                 location,
-                forecast: forecastData.description+'. The temperature is '+forecastData.temperature+', but it feels like '+forecastData.feelsLike
+                forecast: forecastData.description+'. The temperature is '+forecastData.temperature+', but it feels like '+forecastData.feelsLike,
+                humidity: forecastData.humidity,
+                windSpeed: forecastData.wind_speed
             })
         })
     })
